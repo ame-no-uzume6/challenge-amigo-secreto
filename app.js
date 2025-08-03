@@ -23,9 +23,17 @@ function agregarAmigo(){
             console.log(`Amigo ${amigo} agregado al sorteo.`);
             console.log(amigos);
             limpiarCaja()
+            listarAmigos();
             return;
         }  
     }
+}
+
+function listarAmigos(){
+    document.getElementById('listaAmigos').innerHTML = '';
+    amigos.forEach(amigo => {
+    document.getElementById('listaAmigos').innerHTML += `<li>${amigo}</li>`;
+    });
 }
 
 function limpiarCaja(){
