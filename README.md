@@ -7,6 +7,8 @@ Este proyecto es una aplicación web simple para realizar un sorteo de "Amigo Se
 1. **Agregar amigos:**  
    En la página principal, escribe el nombre de cada amigo en el campo de texto y haz clic en el botón "Añadir". Los nombres aparecerán en una lista. No se permiten nombres vacíos ni repetidos.
 <img width="1799" height="881" alt="Captura de pantalla 2025-08-02 224334" src="https://github.com/user-attachments/assets/e23e9979-90b2-4be8-8026-9f24a5f86b7c" />
+
+
 <img width="1800" height="881" alt="Captura de pantalla 2025-08-02 224228" src="https://github.com/user-attachments/assets/04488e28-35d0-481c-86cb-4036ce7051cc" />
 
 2. **Sortear amigo secreto:**  
