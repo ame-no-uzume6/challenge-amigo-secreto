@@ -15,15 +15,17 @@ function agregarAmigo(){
     }else{
       // Verificar si el nombre ya existe en el array
         if (amigos.includes(amigo)) {
-            console.log(`El amigo ${amigo} ya está en el sorteo.`);
-            limpiarCaja()
+            // Si el nombre ya está en el array, mostrar un mensaje y limpiar la caja de texto
+            alert(`El amigo ${amigo} ya está en el sorteo.`);
+            limpiarCajaAmigo()
             return;
         } else {
+            // Si el nombre no existe, agregarlo al array, mostrarlo en la lista y limpiar la caja de texto
             amigos.push(amigo);
             console.log(`Amigo ${amigo} agregado al sorteo.`);
             console.log(amigos);
-            limpiarCaja()
             listarAmigos();
+            limpiarCajaAmigo();
             return;
         }  
     }
@@ -36,6 +38,24 @@ function listarAmigos(){
     });
 }
 
-function limpiarCaja(){
+function limpiarCajaAmigo(){
     document.getElementById('amigo').value = '';
+}
+
+//Sortear amigo secreto
+function sortearAmigo(){
+    if(amigos.length != 0){
+        //definir un index al azar
+        let indiceAleatorio = Math.floor(Math.random()* amigos.length);
+        //Obtener el amigo en la posición del índice aleatorio
+        let amigoSorteado = amigos[indiceAleatorio];
+        //Mostrar el amigo sorteado en el HTML
+        document.getElementById('resultado').innerHTML = `El amigo secreto sorteado es: <strong>${amigoSorteado}</strong>`;
+        //Limpiar lista de amigos
+        amigos = [];
+        document.getElementById('listaAmigos').innerHTML = '';
+    }else{
+        //Si no hay amigos en el sorteo, mostrar mensaje
+        alert("No hay amigos en el sorteo. Por favor, agrega amigos antes de sortear.");
+    }
 }
